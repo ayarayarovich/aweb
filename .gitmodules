@@ -1,0 +1,6 @@
+[submodule "aweb1"]
+	path = aweb1
+	url = https://github.com/ayarayarovich/aweb1.git
+[submodule "aweb2"]
+	path = aweb2
+	url = https://github.com/ayarayarovich/aweb2.git
