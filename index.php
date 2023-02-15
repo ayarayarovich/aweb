@@ -20,14 +20,29 @@ function render_list_link(string $index, string $title, string $href): string
     return "<li><a class='list__item' href='$href'>Задание $index: $title</a></li>";
 }
 
-$files = scandir('.');
+function get_page_title($url) {
+    $fp = file_get_contents($url);
+    if (!$fp)
+        return null;
+
+    $res = preg_match("/<title>(.*)<\/title>/siU", $fp, $title_matches);
+    if (!$res)
+        return null;
+
+    // Clean up title: remove EOL's and excessive whitespace.
+    $title = preg_replace('/\s+/', ' ', $title_matches[1]);
+    $title = trim($title);
+    return $title;
+}
+
+$dirs = scandir('.');
 
 $renderedList = '';
-foreach ($files as $file) {
-    if (is_aweb($file)) {
-        $index = aweb_extract_index($file);
-        $title = "*тут скоро будет тайтл*";
-        $renderedList .= render_list_link($index, $title, $file);
+foreach ($dirs as $dir) {
+    if (is_aweb($dir)) {
+        $index = aweb_extract_index($dir);
+        $title = get_page_title("$dir/index.html");
+        $renderedList .= render_list_link($index, $title, $dir);
     }
 }
 ?>
