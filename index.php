@@ -40,7 +40,7 @@ foreach ($files as $file) {
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="iacon" type="image/x-icon" href="static/favicon.png">
+    <link rel="icon" type="image/x-icon" href="static/favicon.png">
 
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
@@ -48,7 +48,7 @@ foreach ($files as $file) {
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/bootstrap@5/dist/css/bootstrap-grid.min.css,npm/bootstrap@5/dist/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>A-WEB: Главная</title>
+    <title>AWEB: Главная</title>
 </head>
 <body>
 
