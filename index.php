@@ -26,7 +26,7 @@ $renderedList = '';
 foreach ($files as $file) {
     if (is_aweb($file)) {
         $index = aweb_extract_index($file);
-        $title = "тут скоро будет тайтл каждого из заданий, когда разберусь как это сделать :)";
+        $title = "*тут скоро будет тайтл*";
         $renderedList .= render_list_link($index, $title, $file);
     }
 }

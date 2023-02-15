@@ -46,7 +46,7 @@
     position: absolute;
     background-color: var(--main-accent-color-light);
     border-radius: 0.5em;
-    transition: all 0.15s ease;
+    transition: all 0.25s ease;
     top: 0;
     left: 0;
 }
