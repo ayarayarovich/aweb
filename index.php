@@ -59,14 +59,13 @@ foreach ($dirs as $dir) {
 
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/bootstrap@5/dist/css/bootstrap-grid.min.css,npm/bootstrap@5/dist/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="style.css">
     <title>AWEB: Главная</title>
 </head>
 <body>
-
 
     <div class="container mt-5">
         <div class="row">
@@ -77,6 +76,10 @@ foreach ($dirs as $dir) {
         </div>
     </div>
 
+    <a class="shawarma" href="https://web6.ayarayarovich.tech" target="_blank">
+        <img class="shawarma__image" src="static/giros.png" alt="shawarma">
+        <span class="shawarma__text">Может <br> по шаве?</span>
+    </a>
 
 </body>
 </html>
