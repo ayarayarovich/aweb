@@ -6,21 +6,6 @@ if (!function_exists('str_starts_with')) {
     }
 }
 
-function get_page_title(string $url): string
-{
-    $title = '';
-    $dom = new DOMDocument();
-
-    if($dom->loadHTMLFile($url)) {
-        $list = $dom->getElementsByTagName("title");
-        if ($list->length > 0) {
-            $title = $list->item(0)->textContent;
-        }
-    }
-
-    return $title;
-}
-
 function is_aweb(string $string): bool
 {
     return str_starts_with($string, 'aweb');
@@ -41,7 +26,7 @@ $renderedList = '';
 foreach ($files as $file) {
     if (is_aweb($file)) {
         $index = aweb_extract_index($file);
-        $title = get_page_title("./$file/index.html");
+        $title = "тут скоро будет тайтл каждого из заданий, когда разберусь как это сделать :)";
         $renderedList .= render_list_link($index, $title, $file);
     }
 }
