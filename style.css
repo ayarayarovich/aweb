@@ -34,9 +34,12 @@
 
     text-decoration: none;
     color: black;
+
+    outline: none;
 }
 
-.list__item:hover {
+.list__item:hover,
+.list__item:focus {
     color: inherit;
 }
 
@@ -62,11 +65,13 @@
     width: calc(1em + 2 * var(--padding-block));
 }
 
-.list__item:hover::before {
+.list__item:hover::before,
+.list__item:focus::before{
     width: 100%;
 }
 
-.list__item:hover::after {
+.list__item:hover::after,
+.list__item:focus::after{
     height: 1em;
     width: 1em;
 
