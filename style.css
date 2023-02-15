@@ -80,3 +80,8 @@
     box-shadow: 0 0 0.3em 0 var(--main-accent-color);
 }
 
+@media screen and (max-width: 576px) {
+    .list {
+        margin-left: 0;
+    }
+}
