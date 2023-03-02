@@ -21,10 +21,11 @@ function render_list_link(string $index, string $title, string $href): string
 }
 
 function get_page_title($url) {
-    $fp = file_get_contents("$url/index.html");
-    if (!$fp)
+    if (file_exists("$url/index.html"))
+        $fp = file_get_contents("$url/index.html");
+    else if (file_exists("$url/index.php"))
         $fp = file_get_contents("$url/index.php");
-    if (!$fp)
+    else
         return "Без имени";
 
     $res = preg_match("/<title>(.*)<\/title>/siU", $fp, $title_matches);
