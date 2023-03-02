@@ -25,7 +25,7 @@ function get_page_title($url) {
     if (!$fp)
         $fp = file_get_contents("$url/index.php");
     if (!$fp)
-        return null;
+        return "Без имени";
 
     $res = preg_match("/<title>(.*)<\/title>/siU", $fp, $title_matches);
     if (!$res)
