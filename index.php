@@ -21,7 +21,9 @@ function render_list_link(string $index, string $title, string $href): string
 }
 
 function get_page_title($url) {
-    $fp = file_get_contents($url);
+    $fp = file_get_contents("$url/index.html");
+    if (!$fp)
+        $fp = file_get_contents("$url/index.php");
     if (!$fp)
         return null;
 
@@ -41,7 +43,7 @@ $renderedList = '';
 foreach ($dirs as $dir) {
     if (is_aweb($dir)) {
         $index = aweb_extract_index($dir);
-        $title = get_page_title("$dir/index.html");
+        $title = get_page_title("$dir");
         $renderedList .= render_list_link($index, $title, $dir);
     }
 }
